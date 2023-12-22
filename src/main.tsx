@@ -1,9 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import LoginForm from './assets/components/LoginForm'
+
+import '@/assets/styles/main.scss'
+
+import App from '@/App'
+import { AuthProvider } from '@/providers/AuthProvider'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<LoginForm />
+		<AuthProvider>
+			<App />
+		</AuthProvider>
 	</React.StrictMode>
 )
